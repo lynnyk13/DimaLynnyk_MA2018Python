@@ -53,7 +53,7 @@ def input_guess(guess):
         new_game()
     elif number_of_guesses <= 1:
         print "Game Over! Out Of Guesses!"
-        new_game
+        new_game()
 
     else:
         print"Something wrong"
