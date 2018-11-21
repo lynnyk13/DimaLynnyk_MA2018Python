@@ -5,6 +5,7 @@ num_range = 100
 secret = 0
 user_guess = 0
 num_guesses = 7
+
 def new_game():
     global secret_number
     global number_of_guesses
@@ -22,19 +23,22 @@ def range100():
     number_of_guesses = 7
    
     print"New Game!! Curren range set to 0-100"
-def range1000():
+    
+ def range1000():
     global secret_number
     global number_of_guesses
     secret_number = random.randrange(0, 1001)
     number_of_guesses = 10
   
     print"New Game!! Current range set to 0-1000"
+
 def input_guess(guess):
     global number_of_guesses
     guess = int(guess)
     print""
     print "Guess was:",guess
     print""
+    
     if guess > secret_number and number_of_guesses > 0:
         print"Lower"
         print""
