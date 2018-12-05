@@ -45,11 +45,9 @@ def draw(canvas):
     canvas.draw_text(str(scores2), (400, 60), 40, "Red")
     canvas.draw_line([WIDTH / 2, 0], [WIDTH / 2, HEIGHT], 1, "White")
     canvas.draw_line([PAD_WIDTH, 0], [PAD_WIDTH, HEIGHT], 1, "White")
-    canvas.draw_line([WIDTH - PAD_WIDTH, 0],
-                     [WIDTH - PAD_WIDTH, HEIGHT], 1, "White")
+    canvas.draw_line([WIDTH - PAD_WIDTH, 0],[WIDTH - PAD_WIDTH, HEIGHT], 1, "White")
 
-    canvas.draw_polygon([[0, PAD1_POS], [PAD_WIDTH, PAD1_POS], [
-                        PAD_WIDTH, (PAD1_POS) + PAD_HEIGHT], [0, (PAD1_POS) + PAD_HEIGHT]], 2, "White", "Blue")
+    canvas.draw_polygon([[0, PAD1_POS], [PAD_WIDTH, PAD1_POS],[ PAD_WIDTH, (PAD1_POS) + PAD_HEIGHT], [0, (PAD1_POS) + PAD_HEIGHT]], 2, "White", "Blue")
     canvas.draw_polygon([[WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH,PAD2_POS + PAD_HEIGHT], [WIDTH, PAD2_POS + PAD_HEIGHT]], 2, "White", "Red")
 
     canvas.draw_circle(ball_pos, BALL_RADIUS, 5, "Red", "White")
