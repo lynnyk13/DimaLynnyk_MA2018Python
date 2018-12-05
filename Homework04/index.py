@@ -50,8 +50,7 @@ def draw(canvas):
 
     canvas.draw_polygon([[0, PAD1_POS], [PAD_WIDTH, PAD1_POS], [
                         PAD_WIDTH, (PAD1_POS) + PAD_HEIGHT], [0, (PAD1_POS) + PAD_HEIGHT]], 2, "White", "Blue")
-    canvas.draw_polygon([[WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH,
-                                                                            PAD2_POS + PAD_HEIGHT], [WIDTH, PAD2_POS + PAD_HEIGHT]], 2, "White", "Red")
+    canvas.draw_polygon([[WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH, PAD2_POS], [WIDTH - PAD_WIDTH,PAD2_POS + PAD_HEIGHT], [WIDTH, PAD2_POS + PAD_HEIGHT]], 2, "White", "Red")
 
     canvas.draw_circle(ball_pos, BALL_RADIUS, 5, "Red", "White")
 
