@@ -188,6 +188,7 @@ frame.set_canvas_background("Green")
 frame.add_button('Deal', deal, 200)
 frame.add_button('Hit',  hit, 200)
 frame.add_button('Stand', stand, 200)
+#reset score to 0
 frame.add_button('Restart', restart, 200)
 frame.set_draw_handler(draw)
 
