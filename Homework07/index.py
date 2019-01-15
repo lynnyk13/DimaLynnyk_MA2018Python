@@ -47,8 +47,7 @@ class TwentyFortyEight:
         self.reset()
 
     def reset(self):
-        self.grid = [[0 for dummy_col in range(
-            self.grid_width)] for dummy_row in range(self.grid_height)]
+        self.grid = [[0 for dummy_col in range(self.grid_width)] for dummy_row in range(self.grid_height)]
 
     def __str__(self):
         return str(self.grid)
@@ -144,8 +143,7 @@ class TwentyFortyEight:
             random_row = randrange(0, self.grid_height)
             random_col = randrange(0, self.grid_width)
             if self.grid[random_row][random_col] is 0:
-                self.set_tile(random_row, random_col,
-                              probabilities[int(random() * 100)])
+                self.set_tile(random_row, random_col,probabilities[int(random() * 100)])
                 break
 
     def set_tile(self, row, col, value):
