@@ -46,8 +46,8 @@ class Apocalypse(poc_grid.Grid):
 
     def zombies(self):
 
-        for zomby in self._zombie_list:
-            yield zomby
+        for zombie in self._zombie_list:
+            yield zombie
 
     def add_human(self, row, col):
 
@@ -89,18 +89,21 @@ class Apocalypse(poc_grid.Grid):
                 if self._visited.is_empty(neighbor[0], neighbor[1]) and self.is_empty(neighbor[0], neighbor[1]):
                     self._visited.set_full(neighbor[0], neighbor[1])
                     self._boundary.enqueue(neighbor)
-                    self._distance_field[neighbor[0]][neighbor[1]] = self._distance_field[current_cell[0]][current_cell[1]] + 1
+                    self._distance_field[neighbor[0]][neighbor[1]
+                                                      ] = self._distance_field[current_cell[0]][current_cell[1]] + 1
         return self._distance_field
 
     def move_humans(self, zombie_distance_field):
 
         next_human_list = []
         for current_cell in self._human_list:
-            current_distance = zombie_distance_field[current_cell[0]][current_cell[1]]
+            current_distance = zombie_distance_field[current_cell[0]
+                                                     ][current_cell[1]]
             distance_list = [[current_cell], [], []]
             neighbors = self.eight_neighbors(current_cell[0], current_cell[1])
             for neighbor in neighbors:
-                dummy_idx = zombie_distance_field[neighbor[0]][neighbor[1]] - current_distance
+                dummy_idx = zombie_distance_field[neighbor[0]
+                                                  ][neighbor[1]] - current_distance
                 if 0 <= dummy_idx < 3:
                     distance_list[dummy_idx].append(neighbor)
 
@@ -118,7 +121,8 @@ class Apocalypse(poc_grid.Grid):
         next_zombie_list = []
         for current_cell in self._zombie_list:
             neighbors = self.four_neighbors(current_cell[0], current_cell[1])
-            current_distance = human_distance_field[current_cell[0]][current_cell[1]]
+            current_distance = human_distance_field[current_cell[0]
+                                                    ][current_cell[1]]
             distance_list = [[current_cell], []]
 
             for neighbor in neighbors:
